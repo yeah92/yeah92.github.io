@@ -28,12 +28,13 @@ function noticeManageGetRepostitory(){
 						var td=document.createElement("td");
 						mrBox.appendChild(table);
 						table.appendChild(tr);
-						table.setAttribute("name",ntxt[i].full_name);
-						table.onclick=openRepo;
 						tr.appendChild(td);
 						table.className="tabletable";
 						tr.addEventListener("mouseover",mouseOverBlue);
 						td.innerHTML=rn;
+						table.setAttribute("name",ntxt[i].full_name);
+						td.setAttribute("name",ntxt[i].full_name);
+						td.onclick=openRepo;
 					};
 				};
 			};
@@ -74,8 +75,6 @@ function noticeManageGetContributeRepostitory(){
 									if(ic!==-1){
 										var repositoryStarCount=ntxt.stargazers_count;
 										var rTable=document.createElement("table");
-										rTable.setAttribute("name",repositoryName);
-										rTable.onclick=openRepo;
 										var rTr=document.createElement("tr");
 										var rNTd=document.createElement("td");
 										var rCTd=document.createElement("td");
@@ -87,6 +86,8 @@ function noticeManageGetContributeRepostitory(){
 										rTr.appendChild(rNTd);
 										rTr.appendChild(rCTd);
 										rNTd.innerHTML='项目：'+repositoryName;
+										rNTd.setAttribute("name",repositoryName);
+										rNTd.onclick=openRepo;
 										rNTd.style.backgroundColor="rgba(245,245,245,0.2)";
 										rCTd.innerHTML='收藏人数：'+repositoryStarCount;
 									};
@@ -168,21 +169,19 @@ function getXUserRepository(){
 							var rf=ntxt[i].fork;
 							var ivalue=document.getElementById("repositorySearchInput").value;
 							var ic=rn.search(ivalue);
-							console.log(rn);
-							console.log(rf);
-							console.log(ic);
 							if(rf==false&&ic!==-1){
 								var table=document.createElement("table");
 								var tr=document.createElement("tr");
 								var td=document.createElement("td");
 								mrBox.appendChild(table);
 								table.appendChild(tr);
-								table.setAttribute("name",ntxt[i].full_name);
-								table.onclick=openRepo;
+								
 								tr.appendChild(td);
 								table.className="tabletable";
 								tr.addEventListener("mouseover",mouseOverBlue);
 								td.innerHTML=rn;
+								td.setAttribute("name",ntxt[i].full_name);
+								td.onclick=openRepo;
 							};
 						};
 					};
@@ -223,12 +222,13 @@ function getXUserRepository(){
 									var td=document.createElement("td");
 									mrBox.appendChild(table);
 									table.appendChild(tr);
-									table.setAttribute("name",ntxt[i].full_name);
-									table.onclick=openRepo;
+									
 									tr.appendChild(td);
 									table.className="tabletable";
 									tr.addEventListener("mouseover",mouseOverBlue);
 									td.innerHTML=rn;
+									td.setAttribute("name",ntxt[i].full_name);
+									td.onclick=openRepo;
 								};
 							};
 						};
@@ -286,12 +286,13 @@ function rSearch(){
 									var td=document.createElement("td");
 									mrBox.appendChild(table);
 									table.appendChild(tr);
-									table.setAttribute("name",ntxt[i].full_name);
-									table.onclick=openRepo;
+									
 									tr.appendChild(td);
 									table.className="tabletable";
 									tr.addEventListener("mouseover",mouseOverBlue);
 									td.innerHTML=rn;
+									td.setAttribute("name",ntxt[i].full_name);
+									td.onclick=openRepo;
 								};
 							};
 						};
@@ -334,12 +335,13 @@ function rSearch(){
 										var td=document.createElement("td");
 										mrBox.appendChild(table);
 										table.appendChild(tr);
-										table.setAttribute("name",ntxt[i].full_name);
-										table.onclick=openRepo;
+										
 										tr.appendChild(td);
 										table.className="tabletable";
 										tr.addEventListener("mouseover",mouseOverBlue);
 										td.innerHTML=rn;
+										td.setAttribute("name",ntxt[i].full_name);
+										td.onclick=openRepo;
 									};
 								};
 							};
