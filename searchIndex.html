@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>GitHub搜索结果</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/noticeBoxStyle.css"/>
+	<link rel="stylesheet" href="css/canvas_style.css">
+	<script type="text/javascript" src="script/canvas/paper-full.min.js"></script>
+	<script type="text/paperscript" canvas="canvas">
+	var m18PI=0;
+		var m19PI=0;
+		var m18x=200*Math.cos(m18PI);
+		var m18y=52*Math.sin(m18PI);
+		var m19x=300*Math.cos(m19PI);
+		var m19y=98*Math.sin(m19PI);
+		var m17b=new Path.Arc({
+			position:[window.innerWidth*0.618-120*Math.sin(23*Math.PI/180)/10.1,window.innerHeight*0.618+120*Math.cos(23*Math.PI/180)/3],
+			from:[window.innerWidth*0.618-120*Math.cos(23*Math.PI/180),window.innerHeight*0.618-120*Math.sin(23*Math.PI/180)-1.2],
+			through:[window.innerWidth*0.618-120*Math.sin(23*Math.PI/180),window.innerHeight*0.618+120*Math.cos(23*Math.PI/180)],
+			to:[window.innerWidth*0.618+120*Math.cos(23*Math.PI/180),window.innerHeight*0.618+120*Math.sin(23*Math.PI/180)-1.2],
+			strokeColor:"#ffc1c1",
+			strokeWidth:4,
+			fillColor:"#cc5151",
+		});
+		<!-- console.log(m17b.position); -->
+		var m18r=new Shape.Ellipse({
+			position:[window.innerWidth*0.618,window.innerHeight*0.618],
+			radius:[200,52],
+			strokeColor:'#ffffe5',
+			strokeWidth:4,
+			rotation:23,
+		});
+		var m18=new Shape.Circle({
+			position:[window.innerWidth*0.618+m18x,window.innerHeight*0.618+m18y],
+			radius:12,
+			fillColor:'#a0522d',
+		});
+		var m19r=new Path.Ellipse({
+			position:[window.innerWidth*0.618,window.innerHeight*0.618],
+			radius:[300,98],
+			strokeColor:'#fffff4',
+			strokeWidth:4,
+			rotation:23,
+		});
+		var m19=new Shape.Circle({
+			position:[window.innerWidth*0.618+m19x,window.innerHeight*0.618+m19y],
+			radius:20,
+			fillColor:'#daa520',
+		});
+		var m17a=new Path.Arc({
+			position:[window.innerWidth*0.618+120*Math.sin(23*Math.PI/180)/10.1,window.innerHeight*0.618-120*Math.cos(23*Math.PI/180)/3],
+			from:[window.innerWidth*0.618-120*Math.cos(23*Math.PI/180),window.innerHeight*0.618-120*Math.sin(23*Math.PI/180)+1.2],
+			through:[window.innerWidth*0.618+120*Math.sin(23*Math.PI/180),window.innerHeight*0.618-120*Math.cos(23*Math.PI/180)],
+			to:[window.innerWidth*0.618+120*Math.cos(23*Math.PI/180),window.innerHeight*0.618+120*Math.sin(23*Math.PI/180)+1.2],
+			strokeColor:"#ffc1c1",
+			strokeWidth:4,
+			fillColor:"#cc5151",
+		});
+		<!-- console.log(m17a.position); -->
+		function m18m(){
+			m18PI=m18PI+0.01;
+		};
+		function m19m(){
+			m19PI=m19PI+0.007;
+		};
+		setInterval(m18m,10);
+		setInterval(m19m,10);
+		function onFrame(event){
+			vector = vector + (mouseVector - vector) / 3000;
+			for (var i = 0; i < count; i++) {
+				var item = project.activeLayer.children[i];
+				var size = item.bounds.size;
+				var length = vector.length / 10 * size.width / 10;
+				item.position += vector.normalize(length) + item.data.vector;
+				keepInView(item);
+			};
+			
+			var m18x=200*Math.cos(m18PI);
+			var m18y=52*Math.sin(m18PI);
+			var p18=new paper.Point(window.innerWidth*0.618+m18x,window.innerHeight*0.618+m18y);
+			m18.position=p18;
+			m18.rotate(23,[window.innerWidth*0.618,window.innerHeight*0.618]);
+			var m19x=300*Math.cos(m19PI);
+			var m19y=98*Math.sin(m19PI);
+			var p19=new paper.Point(window.innerWidth*0.618+m19x,window.innerHeight*0.618+m19y);
+			m19.position=p19;
+			m19.rotate(23,[window.innerWidth*0.618,window.innerHeight*0.618]);
+			<!-- m18.position=[window.innerWidth*0.618+m18x,window.innerHeight*0.618+m18y]; -->
+			m18r.position=[window.innerWidth*0.618,window.innerHeight*0.618];
+			<!-- m19.position=[window.innerWidth*0.618+m19x,window.innerHeight*0.618+m19y]; -->
+			m19r.position=[window.innerWidth*0.618,window.innerHeight*0.618];
+			m17a.position=[window.innerWidth*0.618+120*Math.sin(23*Math.PI/180)/10.1,window.innerHeight*0.618-120*Math.cos(23*Math.PI/180)/3];
+			m17b.position=[window.innerWidth*0.618-120*Math.sin(23*Math.PI/180)/10.1,window.innerHeight*0.618+120*Math.cos(23*Math.PI/180)/3];
+			
+			
+
+        // Run through the active layer's children list and change
+        // the position of the placed symbols:
+        
+		};
+		function onResize(){
+			m18.position=[window.innerWidth*0.618+m18x,window.innerHeight*0.618+m18y];
+			m18r.position=[window.innerWidth*0.618,window.innerHeight*0.618];
+			m19.position=[window.innerWidth*0.618+m19x,window.innerHeight*0.618+m19y];
+			m19r.position=[window.innerWidth*0.618,window.innerHeight*0.618];
+			m17a.position=[window.innerWidth*0.618+120*Math.sin(23*Math.PI/180)/10.1,window.innerHeight*0.618-120*Math.cos(23*Math.PI/180)/3];
+			m17b.position=[window.innerWidth*0.618-120*Math.sin(23*Math.PI/180)/10.1,window.innerHeight*0.618+120*Math.cos(23*Math.PI/180)/3];
+        };
+		   // The amount of symbol we want to place;
+    var count = 30;
+
+    // Create a symbol, which we will use to place instances of later:
+    var path = new Path.Circle({
+        center: new Point(750, 750),
+        radius: 5,
+        fillColor: 'white',
+    });
+
+    var symbol = new SymbolDefinition(path);
+
+    // Place the instances of the symbol:
+    for (var i = 0; i < (count-6); i++) {
+        // The center position is a random point in the view:
+        var center = Point.random() * view.size;
+        var placed = symbol.place(center);
+        var scale = (i + 2) / count ;
+        placed.scale(scale);
+		<!-- console.log(scale); -->
+		if (scale<0.5){
+			placed.insertBelow(m17a);
+			placed.insertBelow(m17b);
+		};
+        placed.data.vector = new Point({
+            angle: Math.random() * 360,
+            length : (scale * Math.random() / 700 ),
+        });
+    }
+
+    var vector = new Point({
+        angle: 45,
+        length: 0
+    });
+
+    var mouseVector = vector.clone()+18;
+
+    <!-- function onMouseMove(event) { -->
+        <!-- mouseVector = (view.center - event.point)/10; -->
+    <!-- } -->
+
+    // The onFrame function is called up to 60 times a second:
+    function keepInView(item) {
+        var position = item.position;
+        var itemBounds = item.bounds;
+        var bounds = view.bounds;
+        if (itemBounds.left > bounds.width) {
+            position.x = -item.bounds.width/10;
+        }
+
+        if (position.x < -itemBounds.width) {
+            position.x = (bounds.width + itemBounds.width)/10;
+        }
+
+        if (itemBounds.top > view.size.height) {
+            position.y = -itemBounds.height/10;
+        }
+
+        if (position.y < -itemBounds.height) {
+            position.y = (bounds.height  + itemBounds.height / 2)/10;
+        }
+    }
+	</script>
+</head>
+<body>
+	<canvas id="canvas" resize hidpi="off" style="background:#3B3251"></canvas>
+	<div id="top" class="top">
+		<div id="gindex" class="g">GitHub</div>
+		<div class="sbox">
+			<input id="t" type="text" class="in" />
+			<div class="ps">请求</div>
+			<div class="ps">事件</div>
+		</div>
+		<div id="userbutt" class="lb">登录</div>
+	</div>
+	<table id="h" class="h">
+		<tr><td class="b">你的文件</td></tr>
+		<tr><td class="b">你的收藏</td></tr>
+		<tr><td class="b">探索</td></tr>
+		<tr><td class="b">新建项目</td></tr>
+		<tr><td class="b">导入项目</td></tr>
+		<tr><td class="b">新的gist</td></tr>
+		<tr><td class="b">新的组织</td></tr>
+		<tr><td class="b">设置</td></tr>
+		<tr><td class="b">需要帮助</td></tr>
+		<tr><td class="b">退出账号</td></tr>
+	</table>
+	<div id="notice" class="notice">
+		<table class="noticeTop">
+			<tr>
+				<td id="noticeMenuButt" class="noticeTopTitle">通知栏</td>
+				<td id="noticeRefresh" class="noticeTopRefresh">刷新</td>
+			</tr>
+		</table>
+		<table id="noticeMenuBox" class="noticeMenuBox">
+			<tr><td id="unread" class="noticeMenu">未读信息</td></tr>
+			<tr><td id="all" class="noticeMenu">所有信息</td></tr>
+			<tr><td id="manage" class="noticeMenu">信息管理界面</td></tr>
+		</table>
+		<div id="ntsb" class="ntsb">
+			<div id="noticeContent" class="noticeContent"></div>
+		</div>
+	</div>
+	<div id="c" class="l">
+		<div id="advancedSearch">自定义搜索</div>
+		<div id="optionBox1">
+			<h1 id="optionTitle">高级选项</h1>
+			<div><span>属于谁</span><input type="text" placeholder="github,joyent" name="user:"/></div>
+			<div><span>属于什么项目</span><input type="text" placeholder="twbs/bootstrap,rails/rails" name="repo:"/></div>
+			<div><span>创建于</span><input type="text" placeholder=">YYYY-MM-DD,YYYY-MM-DD" name="created:"/></div>
+			<div><span>语言类型</span><input type="text" placeholder="JavaScript" name="languages:"/></div>
+		</div>
+		<div id="optionBox2">
+			<h1 id="optionTitle">项目选项</h1>
+			<div><span>收藏人数</span><input type="text" placeholder="0..100,200,>100" name="stars:"/></div>
+			<div><span>分支数量</span><input type="text" placeholder="50..100,200,<5" name="forks:"/></div>
+			<div><span>大小</span><input type="text" placeholder="Repository size in KB" name="size:"/></div>
+			<div><span>最近更新</span><input type="text" placeholder="<YYYY-MM-DD" name="pushed:"/></div>
+			<div>
+				<span>是否返回分支结果</span>
+				<select class="optionSelect" name="fork:">
+					<option name="fork:" value="">不选</option>
+					<option name="fork:" value="false">不返回分支</option>
+					<option name="fork:" value="true">本体和分支</option>
+					<option name="fork:" value="only">只返回分支</option>
+				</select>
+			</div>
+		</div>
+		<div id="optionBox3">
+			<h1 id="optionTitle">事件选项</h1>
+			<div>
+				<span>事件类型</span>
+				<select class="optionSelect" name="type:">
+					<option name="fork:" value="">所有</option>
+					<option name="fork:" value="issue">事件</option>
+					<option name="fork:" value="pr">请求</option>
+				</select>
+			</div>
+			<div>
+				<span>事件状态</span>
+				<select class="optionSelect" name="state:">
+					<option name="fork:" value="">所有</option>
+					<option name="fork:" value="open">开放</option>
+					<option name="fork:" value="close">关闭</option>
+				</select>
+			</div>
+			<div><span>评论数</span><input type="text" placeholder="0..100,>442" name="comments:"/></div>
+			<div><span>标签</span><input type="text" placeholder="bug,ie6" name="labels:"/></div>
+			<div><span>作者</span><input type="text" placeholder="Tom,LiLei" name="author:"/></div>
+			<div><span>提到谁</span><input type="text" placeholder="Tracy,Matty" name="mentions:"/></div>
+			<div><span>分派给谁</span><input type="text" placeholder="Jack" name="assignee:"/></div>
+			<div><span>最近更新时间</span><input type="text" placeholder="YYYY-MM-DD" name="updated:"/></div>
+		</div>
+		<div id="optionBox4">
+			<h1 id="optionTitle">用户选项</h1>
+			<div><span>全名</span><input placeholder="Grace Hopper" type="text" name="fullname:"/></div>
+			<div><span>来自</span><input placeholder="Ring City,SW" type="text" name="location:"/></div>
+			<div><span>歌迷数量</span><input placeholder="20..50,>200,<2" type="text" name="followers:"/></div>
+			<div><span>拥有项目数量</span><input placeholder="0,<42,>5" type="text" name="repos:"/></div>
+			<div><span>语言</span><input placeholder="兽人语" type="text" name="language:"/></div>
+		</div>
+	</div>
+	<div class="contentBox">
+		<table id="searchResultSort">
+			<table id="searchRTBS" class="searchRTBS">
+				<tr id="searchRTBStr" name="repositories">
+					<td name="repositories">项目<span id="sRRC" name="repositories">0</span></td>
+					<td name="issues">事件<span id="sRIC" name="issues">0</span></td>
+					<!-- <td name="issues">贡献<span id="sRCC">0</span></td> -->
+					<td name="users">用户<span id="sRUC" name="users">0</span></td>
+				</tr>
+			</table>
+			<table id="searchRTB" class="searchRTB">
+				<tr id="searchRTBtr">
+					<td id="resultCount">result</td>
+					<td id="sortMenuButt">最相符</td>
+				</tr>
+			</table>
+			<table id="sortMenuBox" name="best match">
+				<tr><td class="sortMenuTd" name="best match">最相符</td></tr>
+				<tr><td class="sortMenuTd">最多收藏</td></tr>
+				<tr><td class="sortMenuTd">最少收藏</td></tr>
+				<tr><td class="sortMenuTd">最多分支</td></tr>
+				<tr><td class="sortMenuTd">最少分支</td></tr>
+				<tr><td class="sortMenuTd">最近更新</td></tr>
+				<tr><td class="sortMenuTd">最远更新</td></tr>
+			</table>
+		</table>
+		<div id="searchResultContent"></div>
+		<div>
+			<table id="chosePage" class="chosePage" name="1">
+				<tr id="cptr">
+				</tr>
+			</table>
+		</div>
+	</div>
+		<script type="text/javascript" src="script/canvas/canvas.js"></script>
+		<script src="script/base/addLoadEvent.js"></script>
+		<script src="script/base/getHTTPObject.js"></script>
+		<script src="script/login/login.js"></script>
+		<script src="script/getUserContent/getUserContent.js"></script>
+		<script src="script/userIndex/openUserIndex.js"></script>
+		<script src="script/readIndex/openRepo.js"></script>
+		<script src="script/userMenu/userBoxOpen.js"></script>
+		<script src="script/userMenu/userBoxClose.js"></script>
+		<script src="script/userMenu/userButtConsole.js"></script>
+		<script src="script/getNoticeContent/getNoticeContent.js"></script>
+		<script src="script/noticeMenu/noticeMenuOpen.js"></script>
+		<script src="script/noticeMenu/noticeMenuClose.js"></script>
+		<script src="script/noticeMenu/noticeMenuConsole.js"></script>
+		<script src="script/scrollbar/scrollx.js"></script>
+		<script src="script/scrollbar/scrolldivx.js"></script>
+		<script src="script/follow/follow.js"></script>
+		<script src="script/searchIndex/searchIndexEffect.js"></script>
+		<script src="script/menujs/menu.js"></script>
+		<script src="script/searchjs/search.js"></script>
+		<script src="script/searchIndex/inputSearch.js"></script>
+</body>
+</html>

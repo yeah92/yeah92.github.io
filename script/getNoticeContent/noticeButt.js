@@ -1,0 +1,11 @@
+var ub=document.getElementById("userbutt");
+var menu=document.getElementById("h");
+window.onload=getNewContent();
+ub.addEventListener("mouseover",userboxopen);
+ub.addEventListener("mouseover",stopuserboxclose);
+ub.addEventListener("mouseout",userboxclose);
+ub.addEventListener("mouseout",stopuserboxopen);
+menu.addEventListener("mouseover",stopuserboxclose);
+menu.addEventListener("mouseover",userboxopen);
+menu.addEventListener("mouseout",stopuserboxopen);
+menu.addEventListener("mouseout",userboxclose);

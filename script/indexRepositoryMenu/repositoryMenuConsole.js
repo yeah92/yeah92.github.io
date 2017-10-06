@@ -1,0 +1,18 @@
+var rMButt=document.getElementById("noticeRepositoryMenuButt");
+var rMBox=document.getElementById("noticerepositoryMenuBox");
+var rTBB=document.getElementById("rTB").children[1];
+var repositorySearchButt=document.getElementById("repositorySearchButt");
+var sInput=document.getElementById("repositorySearchInput");
+var b=document.getElementsByClassName("b");
+var noticeMenuButt=document.getElementById("noticeMenuButt");
+var noticeRefresh=document.getElementById("noticeRefresh");
+var noticeMenu=document.getElementsByClassName("noticeMenu");
+var moreFeedsButt=document.getElementById("moreFeeds");
+rMButt.addEventListener("mouseover",stoprINMC);
+rMButt.addEventListener("mouseover",riNMO);
+rMButt.addEventListener("mouseout",stoprINMO);
+rMButt.addEventListener("mouseout",riNMC);
+rMBox.addEventListener("mouseover",stoprINMC);
+rMBox.addEventListener("mouseover",riNMO);
+rMBox.addEventListener("mouseout",stoprINMO);
+rMBox.addEventListener("mouseout",riNMC);

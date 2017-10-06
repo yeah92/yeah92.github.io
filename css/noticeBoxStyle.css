@@ -1,0 +1,148 @@
+	/*通知栏*/
+	.notice{
+		background-color:rgba(245,245,245,0.3);
+		color:black;
+		height:90%;
+		width:19%;
+		position:absolute;
+		z-index:0;
+		left:0px;
+		top:70px;
+		border-radius:4px;
+		margin:5px;
+		padding:0px;
+		overflow:hidden;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		transition:left 1.4s;
+		-webkit-transition:left 1.4s;
+		-moz-transition:left 1.4s;
+	}
+	/*通知栏顶框*/
+	.noticeTop{
+		width:100%;
+		/* background-color:rgba(245,245,245,0.3); */
+		color:black;
+	}
+	/*通知栏顶框标题*/
+	.noticeTopTitle{
+		font-size:24px;
+		margin:3px;
+		background-color:rgba(245,245,245,0.3);
+		color:#3B3251;
+		font-weight:bold;
+		text-align:center;
+		width:70%;
+		cursor:pointer;
+		border-radius:4px;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+	}
+	/*通知栏顶框刷新按钮*/
+	.noticeTopRefresh{
+		font-size:24px;
+		background-color:rgba(245,245,245,0.3);
+		margin:3px;
+		color:#3B3251;
+		font-weight:bold;
+		text-align:center;
+		width:30%;
+		cursor:pointer;
+		border-radius:4px;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+	}
+	/* 滚动条容器的容器 */
+	.ntsb{
+		width:100%;
+		overflow:hidden;
+		height:95%;
+		position:absolute;
+		top:5%;
+		padding:0px;
+	}
+	/* 通知栏菜单容器*/
+	.noticeMenuBox{
+		/* background-color:black; */
+		width:70%;
+		height:0px;
+		position:absolute;
+		z-index:2;
+		padding:0px;
+		margin:0px;
+		background-color:#3B3251;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		border-collapse:collapse;
+		border-radius:4px;
+	}
+	/* 通知栏菜单选项*/
+	.noticeMenu{
+		/* background-color:black; */
+		text-align:center;
+		font-size:0px;
+		color:#3B3251;
+		background-color:rgba(245,245,220,0.3);
+		padding:0px;
+		cursor:pointer;
+	}
+	/* 每条信息的格式 */
+	.singleNotice{
+		width:92%;
+		height:48px;
+		border-radius:4px;
+		margin:4%;
+		margin-top:8%;
+		margin-bottom:8%;
+		box-shadow:2px 2px 2px rgba(28,28,28,0.4);
+	}
+	.tdTitle{
+		width:100%;
+		cursor:pointer;
+		background-color:rgba(245,245,245,0.35);
+		box-shadow:2px 2px 2px rgba(28,28,28,0.4);
+		border-radius:4px;
+	}
+	.tdTitle:hover{
+		background-color:rgb(102, 102, 255);
+	}
+	.tdTime{
+		width:100%;
+		background-color:rgba(245,245,245,0.24);
+		box-shadow:2px 2px 2px rgba(28,28,28,0.4);
+		border-radius:4px;
+	}
+	.userLogin{
+		background-color:rgba(245,245,245,0.1);
+		color:rgba(255,246,143,0.7);
+		cursor:pointer;
+		border-radius:4px;
+	}
+	.userLogin:hover{
+		background-color:rgb(102, 102, 255);
+		color:rgba(245,245,245,0.9);
+	}
+	.ctdCommenter{
+		background-color:rgba(245,245,245,0.1);
+		color:rgba(255,200,100,0.7);
+		cursor:pointer;
+		border-radius:4px;
+	}
+	.ctdCommenter:hover{
+		background-color:rgb(102, 102, 255);
+		color:rgba(245,245,245,0.9);
+	}
+	.noticeN{
+		background-color:rgba(245,245,245,0.3);
+		color:black;
+		height:90%;
+		width:19%;
+		position:absolute;
+		z-index:0;
+		left:-20%;
+		top:70px;
+		border-radius:4px;
+		margin:5px;
+		padding:0px;
+		overflow:hidden;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		transition:left 1.4s;
+		-webkit-transition:left 1.4s;
+		-moz-transition:left 1.4s;
+	}

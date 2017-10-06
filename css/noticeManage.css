@@ -1,0 +1,149 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+	/*通知栏*/
+	.notice{
+		background-color: rgba(245,245,245,0.3);
+		height: 90%;
+		width: 19%;
+		position: absolute;
+		z-index: 0;
+		left: 0px;
+		top: 70px;
+		border-radius: 4px;
+		margin: 5px;
+		padding: 0px;
+		overflow: hidden;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+	}
+	/*通知栏顶框*/
+	.noticeTop{
+		height:36px;
+		width:100%;
+		font-size:16px;
+		padding:0px;
+		margin:0px;
+		border-radius:4px;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+	}
+	/*通知搜索容器*/
+	.noticeSearchBar{
+		font-size:16px;
+		width:70%;
+		padding:0px;
+		margin:0px;
+		border-collapse:collapse;
+		border-radius:4px;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+	}
+	/* 通知搜索文本框 */
+	.noticeSearchInput{
+		font-size:16px;
+		width:100%;
+		height:100%;
+		margin:0px;
+		color:rgba(245,245,245,0.9);
+		background-color: #3B3251;
+	}
+	/*通知搜索按钮*/
+	.noticeSearchButt{
+		color:#3B3251;
+		text-align:center;
+		width:30%;
+		background-color:rgba(245, 245, 245, 0.3);
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		border-radius:4px;
+		cursor:pointer;
+		font-size:12px;
+		font-weight:bold;
+	}
+	/*通知搜索得到的内容*/
+	.noticeSearchContent{
+		width: 100%;
+		overflow: hidden;
+		height: 95%;
+		position: absolute;
+		top: 5%;
+		padding: 0px;
+	}
+	/* 信息标签容器 */
+	.noticeTabBox{
+		color:#3B3251;
+		text-align:center;
+		width:100%;
+		font-size:20px;
+		cursor:pointer;
+		background-color:rgba(245, 245, 245, 0.4);
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		border-radius:4px;
+	}
+	.noticeTabButt{
+		background-color: rgba(245,245,245,0.35);
+		margin: 2px;
+		float: left;
+		border-radius: 4px;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		width: -webkit-calc((100% - 12px)/3);
+		text-align: center;
+		cursor: pointer;
+	}
+	/* 信息有关项目容器 */
+	.noticeRepositoryBox{
+		color:#3B3251;
+		text-align:center;
+		width:100%;
+		font-size:20px;
+		background-color:rgba(245, 245, 245, 0.4);
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		border-radius:4px;
+	}
+	.noticeRT{
+		background-color: rgba(245,245,245,0.35);
+		margin: 2px;
+		float: left;
+		border-radius: 4px;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		text-align: center;
+		cursor: pointer;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	.noticeRepositoryT{
+		background-color: rgba(245, 245, 245, 0.3);
+		color: #3B3251;
+		text-align: center;
+		width: 100%;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		border-radius: 4px;
+		font-size: 24px;
+		font-weight: bold;
+		cursor:pointer;
+	}
+	.noticeRepositoryT:hover{
+		background-color: rgb(102, 102, 255);
+		color: #3B3251;
+		text-align: center;
+		width: 100%;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		border-radius: 4px;
+		font-size: 24px;
+		font-weight: bold;
+		cursor:pointer;
+	}
+	/* 你的项目 */
+	.noticeRepository{
+		border-collapse:collapse;
+		margin:0px;
+		padding:0px;
+	}
+	/*通知显示的内容*/
+	.noticeContent{
+		background-color: rgba(245,245,245,0.1);
+		border-radius: 4px;
+		box-shadow: 2px 2px 2px rgba(28,28,28,0.4);
+		text-align: center;
+		padding: 1px;
+		width: -webkit-calc(100% - 4px);
+		margin-bottom: 32px;
+	}
