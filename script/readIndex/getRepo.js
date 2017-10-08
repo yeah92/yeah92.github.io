@@ -354,6 +354,7 @@ function getRepoContributor(){
 										var iTd5=document.getElementById(ntxt.id);
 										iTd5.innerHTML=ntxt.bio;
 									};
+									deleteANM();
 								};
 								request.send();
 							};
