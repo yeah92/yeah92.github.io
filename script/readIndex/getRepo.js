@@ -346,7 +346,6 @@ function getRepoContributor(){
 								var gbUrl=bUrl+"?access_token="+to+"&t="+linktime;
 								//var to=document.getElementById("t").value;
 								request.open("GET",gbUrl,true);
-								loadingANM();
 								request.onreadystatechange=function(){
 									if(request.readyState==4){
 										var ntxt=JSON.parse(request.responseText);
@@ -354,7 +353,6 @@ function getRepoContributor(){
 										var iTd5=document.getElementById(ntxt.id);
 										iTd5.innerHTML=ntxt.bio;
 									};
-									deleteANM();
 								};
 								request.send();
 							};
